@@ -16,4 +16,8 @@ public class TestHelloWorldCore extends TestCase {
         assertEquals(c.sayHello("Guido"), "Hello Guido!");
     }
 
+    public void testSayHelloJSON() {
+        assertEquals(c.sayHelloJSON("Guido"), "{\"hello\":\"Guido\"}");
+    }
+
 }

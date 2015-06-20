@@ -17,7 +17,7 @@ public class TestHelloWorldRest extends JerseyTest {
     }
 
     @Test
-    public void testCheck(){
+    public void testHello(){
         ws = resource().path("hello/Guido");
         ClientResponse response = ws.get(ClientResponse.class);
         assertEquals(200, response.getStatus());
