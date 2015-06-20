@@ -25,4 +25,13 @@ public class TestHelloWorldRest extends JerseyTest {
         assertEquals("Hello Guido!", out);
     }
 
+    @Test
+    public void testHelloJSON(){
+        ws = resource().path("hello/json/Guido");
+        ClientResponse response = ws.get(ClientResponse.class);
+        assertEquals(200, response.getStatus());
+        String out = response.getEntity(String.class);
+        assertEquals("{\"hello\":\"Guido\"}", out);
+    }
+
 }
