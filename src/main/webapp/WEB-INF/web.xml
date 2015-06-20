@@ -7,27 +7,21 @@
     <!-- General information -->
     <display-name>jersey-spring-example</display-name>
 
-    <listener>
-        <listener-class>
-            org.springframework.web.context.ContextLoaderListener
-        </listener-class>
-    </listener>
-
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>
-            classpath:spring/applicationContext.xml
-        </param-value>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <servlet>
         <servlet-name>jersey-servlet</servlet-name>
-        <servlet-class>
-            org.glassfish.jersey.servlet.ServletContainer
-        </servlet-class>
+        <servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
         <init-param>
-            <param-name>javax.ws.rs.Application</param-name>
-            <param-value>org.codingpedia.demo.rest.RestDemoJaxRsApplication</param-value>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>org.geobricks.rest</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
