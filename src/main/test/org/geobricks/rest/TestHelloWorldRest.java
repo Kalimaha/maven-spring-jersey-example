@@ -1,0 +1,27 @@
+package org.geobricks.rest;
+
+import org.junit.Test;
+import javax.ws.rs.core.Response;
+import static org.junit.Assert.assertEquals;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.test.framework.JerseyTest;
+import com.sun.jersey.test.framework.WebAppDescriptor;
+
+public class TestHelloWorldRest extends JerseyTest {
+
+    private WebResource ws;
+
+    public TestHelloWorldRest() {
+        super(new WebAppDescriptor.Builder("org.geobricks.rest").build());
+    }
+
+    @Test
+    public void testCheck(){
+        ws = resource().path("hello/guido");
+        ClientResponse response = ws.get(ClientResponse.class);
+        assertEquals(200, response.getStatus());
+        assertEquals("Hello Guido!", response.getEntity(String.class));
+    }
+
+}
