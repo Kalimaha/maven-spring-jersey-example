@@ -18,10 +18,11 @@ public class TestHelloWorldRest extends JerseyTest {
 
     @Test
     public void testCheck(){
-        ws = resource().path("hello/guido");
+        ws = resource().path("hello/Guido");
         ClientResponse response = ws.get(ClientResponse.class);
         assertEquals(200, response.getStatus());
-        assertEquals("Hello Guido!", response.getEntity(String.class));
+        String out = response.getEntity(String.class);
+        assertEquals("Hello Guido!", out);
     }
 
 }
