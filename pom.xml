@@ -33,19 +33,24 @@
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>3.1.0</version>
-				<configuration>
-					<repoToken>v5RnJs2GuN2XjyDjtgEB67IBi7B9UGG7y</repoToken>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.6</version>
+				<version>2.7</version>
 				<configuration>
-					<format>xml</format>
-					<maxmem>256m</maxmem>
-					<aggregate>true</aggregate>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
         </plugins>
     </build>
