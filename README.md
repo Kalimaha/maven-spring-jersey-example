@@ -3,3 +3,17 @@
 
 # Template for Maven-Spring-Jersey web applications
 This project can be used as template to create Java web application built with Maven that provide REST services through Spring and Jersey. The project also includes a section to setup tests for libraries and services.
+
+## Installation
+The project is built with Maven. To create the ```war``` archive run:
+
+````
+mvn clean install
+````
+
+## Tests
+Tests can be executed through Maven with the following instruction:
+
+````
+mvn test
+```
