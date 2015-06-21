@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Kalimaha/jersey-spring-example.svg?branch=master)](https://travis-ci.org/Kalimaha/jersey-spring-example)
+[![Build Status](https://travis-ci.org/Kalimaha/maven-spring-jersey-example.svg?branch=master)](https://travis-ci.org/Kalimaha/maven-spring-jersey-example)
 [![Coverage Status](https://coveralls.io/repos/Kalimaha/jersey-spring-example/badge.svg?branch=master)](https://coveralls.io/r/Kalimaha/jersey-spring-example?branch=master)
 
 # Template for Maven-Spring-Jersey web applications
